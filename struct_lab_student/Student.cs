@@ -1,4 +1,4 @@
-﻿using System;
+﻿using System; 
 using System.Text;
 using System.Linq;
 
@@ -24,20 +24,8 @@ namespace struct_lab_student
             patronymic = data[2];
             sex = Convert.ToChar(data[3]);
             dateOfBirth = data[4];
-            if (data[5] == "-")
-            {
-                data[5] = "2";
-            }
             mathematicsMark = Convert.ToChar(data[5]);
-            if (data[6] == "-")
-            {
-                data[6] = "2";
-            }
             physicsMark = Convert.ToChar(data[6]);
-            if (data[7] == "-")
-            {
-                data[7] = "2";
-            }
             informaticsMark = Convert.ToChar(data[7]);
             scholarship = int.Parse(data[8]);
         }

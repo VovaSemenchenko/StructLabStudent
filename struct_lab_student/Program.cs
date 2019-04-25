@@ -31,6 +31,18 @@ namespace struct_lab_student
             sr.Close();
             return students;
         }
+        
+        static double ToValue(char symbol)
+        {
+            if (symbol == '-')
+            {
+                return 2;
+            }
+            else
+            {
+                return char.GetNumericValue(symbol);
+            }
+        }
 
         static void Average(Student[] studs)
         {
@@ -40,7 +52,7 @@ namespace struct_lab_student
                 average = 0;
                 if (info.scholarship == 0)
                 {
-                    average += ((int)char.GetNumericValue(info.mathematicsMark) + (int)char.GetNumericValue(info.physicsMark) + (int)char.GetNumericValue(info.informaticsMark)) / 3.0;
+                    average += (ToValue(info.mathematicsMark) + ToValue(info.physicsMark) + ToValue(info.informaticsMark)) / 3;
                     Console.WriteLine("{0} {1} {2} {3:0.###}", info.firstName, info.surName, info.patronymic, average);
                 }
             }
