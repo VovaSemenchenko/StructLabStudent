@@ -10,7 +10,8 @@ namespace struct_lab_student
     {
         static Student[] ReadData(string fileName)
         {
-            //int count = File.ReadLines(fileName).Count();
+            int count = File.ReadLines(fileName).Count();
+            /*
             int count = 0;
             using (StreamReader reader = new StreamReader(fileName))
             {
@@ -19,6 +20,7 @@ namespace struct_lab_student
                     count++;
                 }
             }
+            */
             Student[] students = new Student[count];
             StreamReader sr = new StreamReader(fileName, Encoding.Default);
             string line;
